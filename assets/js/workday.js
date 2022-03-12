@@ -1,12 +1,12 @@
-
 // display the date time, format from moment js library
-moment(Date);
+let currentDay = moment();
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
 
 let currentHour = (new Date()).getHours();
 const colorcode = document.getElementsByClassName("textarea");
 $('textarea').each(function(){
+
     let val = parseInt($(this).prop('id'));
     if(val < currentHour && val > currentHour-6){
         $(this).css('background-color','Gray');
