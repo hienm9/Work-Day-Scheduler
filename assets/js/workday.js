@@ -1,6 +1,8 @@
+
+
 let currentHour = (new Date()).getHours();
-const colorcode = document.getElementsByClassName("colorcode");
-$('.colorcode').each(function(){
+const colorcode = document.getElementsByClassName("textarea");
+$('textarea').each(function(){
     let val = parseInt($(this).prop('id'));
     if(val < currentHour && val > currentHour-6){
         $(this).css('background-color','Gray');
