@@ -2,13 +2,13 @@
 let currentDay = moment();
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
+$(document).ready(function () {
 
 function checkTime() {
     let currentHour = (new Date()).getHours();
     console.log(currentHour);
 
     const colorCode = document.getElementsByClassName("time-block");
-debugger;
 
     $(colorCode).each(function(){
         let val = parseInt($(this).prop('id'));
@@ -35,17 +35,19 @@ checkTime();
     //     localStorage.setItem("tasks", JSON.stringify(tasks));
     //   };
 
-
+// $(document).on('click', '.saveBtn', function(){
 $(".saveBtn").click(function() {    
-    let value = $(this).siblings("textarea").val();
-    localStorage.setItem('myVal', value);
+    let textCell = $(this).siblings(".description").val();
+    let timeCell = $(this).parent().prop("id");
+    // Save entered text in local storage
+    localStorage.setItem(timeCell, textCell);
 })
 
-const savedVal = localStorage.getItem('myVal')
+
+let savedVal = localStorage.getItem('id')
 $(this).siblings("textarea").val(savedVal);
 
-  
-
+});
 // psuedo code
 
 // display all of the blocks 
