@@ -7,14 +7,7 @@ let currentHour = (new Date()).getHours();
 const colorcode = document.getElementsByClassName("textarea");
 $('textarea').each(function(){
 
-    let val = parseInt($(this).prop('id'));
-    if(val < currentHour && val > currentHour-6){
-        $(this).css('background-color','Gray');
-    }else if(val === currentHour){
-        $(this).css('background-color','Red');
-    }else{
-        $(this).css('background-color','Green');
-    }
+
 });
 
 //save task to local storage when click on the save button
