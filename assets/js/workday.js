@@ -11,7 +11,7 @@ function checkTime() {
     const colorCode = document.getElementsByClassName("time-block");
 
     $(colorCode).each(function(){
-        let val = parseInt($(this).prop('id'));
+        let val = parseInt($(this).attr('id'));
         if(val < currentHour){
             $(this).css('background-color','Gray');
         }else if(val === currentHour){
@@ -38,16 +38,31 @@ checkTime();
 // $(document).on('click', '.saveBtn', function(){
 $(".saveBtn").click(function() {    
     let textCell = $(this).siblings(".description").val();
-    let timeCell = $(this).parent().prop("id");
+    let timeCell = $(this).parent().attr("id");
     // Save entered text in local storage
     localStorage.setItem(timeCell, textCell);
 })
 
 
-let savedVal = localStorage.getItem('id')
-$(this).siblings("textarea").val(savedVal);
+let savedVal = localStorage.getItem('8');
+debugger;
+// $(".description").val(savedVal);
+
+$(this).siblings(".description").val(savedVal);
 
 });
+
+// Example:
+// $(".saveBtn").click(function() {    
+//     const value = $(this).siblings("textarea").val();
+//     localStorage.setItem('myVal', value);
+// })
+// So you can display it by the textarea with following
+
+// const savedVal = localStorage.getItem('myVal')
+// $(this).siblings("textarea").val(savedVal);
+
+
 // psuedo code
 
 // display all of the blocks 
