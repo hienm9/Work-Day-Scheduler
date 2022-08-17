@@ -1,4 +1,4 @@
-# Challenge-05-Third-Party-APIs-Work-Day-Scheduler
+# Work-Day-Scheduler - third party APIs
 
 Challenge 03 - Work Day Scheduler
 This is a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
